@@ -23,9 +23,8 @@ h1, h2, p {
 
 /* Container for centering content */
 .container {
-    max-width: 1200px; /* Adjust the max-width as needed */
+    max-width: 1250px; /* Adjust the max-width as needed */
     margin: 0 auto;
-    padding: 0 20px; /* Optional: adjust padding for extra spacing */
 }
 
 /* Header styles */
@@ -65,18 +64,23 @@ h1, h2, p {
 
 /* Section styles */
 .section {
-    padding: 50px;
-    text-align: center;
+    padding: 20px;
+    text-align: left;
+    padding-top: 9%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
 }
 
 .home {
-    max-width: 800px;
+    max-width: 680px;
     margin: 0 auto;
+    
 }
 
 .home h1 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom:20px;
 }
 
 .home h2 {
