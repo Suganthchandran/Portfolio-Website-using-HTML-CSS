@@ -1,6 +1,7 @@
+/* Import the font */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-/* basic of the Page */
+/* Basic page styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +13,7 @@
     font-family: 'Nunito', sans-serif;
 }
 
-/* Assigning Color to the variables */
-
+/* Assigning colors to variables */
 :root {
     --bg-color: #171F38;
     --snd-bf-color: #262840;
@@ -31,8 +31,7 @@ body {
     color: var(--text-color);
 }
 
-/* Header Section */
-
+/* Header styles */
 .header {
     position: fixed;
     top: 0;
@@ -53,6 +52,10 @@ body {
     cursor: default;
 }
 
+.navbar {
+    display: flex;
+}
+
 .navbar a {
     color: var(--text-color);
     font-size: 1.78rem;
@@ -61,7 +64,7 @@ body {
     position: relative;
 }
 
-.navbar a::before{
+.navbar a::before {
     content: "";
     position: absolute;
     background-color: var(--main-color);
@@ -72,21 +75,19 @@ body {
     transition: 0.3s;
 }
 
-.navbar a:hover::before{
+.navbar a:hover::before {
     width: 100%;
 }
 
-/* Hamburger icon for repsonsiveness */
-
+/* Hamburger icon for responsiveness */
 #menu-icon {
     font-size: 1.5em;
     color: var(--main-color);
     cursor: pointer;
-    display: none; /* Hidden by default for larger screens */
+    display: none;
 }
 
-/* Section part */
-
+/* Section styles */
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
@@ -96,7 +97,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Added for better responsiveness */
+    flex-wrap: wrap;
 }
 
 .home-content {
@@ -112,24 +113,30 @@ section {
 .home-content h1 {
     font-size: 5.6rem;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 .home-content p {
     margin: 2rem 0;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+}
+
+span {
+    color: var(--main-color);
 }
 
 .home-img {
     flex: 1;
-    text-align: center; /* Center the image for better layout */
+    text-align: center;
 }
 
 .home-img img {
     width: 25vw;
-    height: 25vw; /* Ensures the image remains a square */
-    border-radius: 50%; /* Makes the image round */
-    object-fit: cover; /* Ensures the image covers the entire area */
+    height: 25vw;
+    border-radius: 50%;
+    object-fit: cover;
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -145,14 +152,15 @@ section {
     }
 }
 
-span{
-    color: var(--main-color);
+.social-icon {
+    display: flex;
+    margin-top: 2rem;
 }
 
 .social-icon a {
     color: var(--text-color);
-    font-size: 2rem;
-    margin: 0 1rem;
+    font-size: 2.4rem;
+    margin-right: 2rem;
 }
 
 .social-icon a:hover {
@@ -162,6 +170,8 @@ span{
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
+    margin: 2rem 2.8rem;
+    font-size: 1.7rem;
     background: var(--main-color);
     color: var(--text-color);
     border-radius: 5rem;
@@ -173,14 +183,56 @@ span{
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .navbar {
+        display: none; /* Hide navbar on smaller screens */
+    }
+
+    #menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        padding: 1rem 0;
+    }
+
     .navbar a {
-        font-size: 1.2rem;
-        margin-left: 2rem;
+        margin: 1rem 0;
+        text-align: center;
     }
 
     .home-content h3, .home-content h1 {
         font-size: 2.4rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+    }
+
+    .home-img img {
+        width: 30vw;
+        height: 30vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content h3 {
+        font-size: 2.4rem;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
     }
 
     .home-img img {
@@ -190,17 +242,20 @@ span{
 }
 
 @media (max-width: 480px) {
-    .navbar a {
-        font-size: 1rem;
-        margin-left: 1rem;
-    }
-
     .home-content {
         padding: 1rem;
     }
 
-    .home-content h3, .home-content h1 {
+    .home-content h3 {
         font-size: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
     }
 
     .home-img img {
