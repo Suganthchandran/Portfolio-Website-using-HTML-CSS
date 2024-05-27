@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
 /* Basic page styles */
 * {
     margin: 0;
@@ -11,6 +9,11 @@
     scroll-behavior: smooth;
     font-family: 'Nunito', sans-serif;
 }
+
+::selection {
+    color: #5982f4;
+    background: #262840 ;
+  }
 
 /* Assigning colors to variables */
 :root {
@@ -182,6 +185,136 @@ span {
 .btn:hover {
     background: var(--snd-bf-color);
 }
+
+.about{
+    padding: 8% 10%;
+}
+
+.about-content{
+    display: flex;
+    justify-content: left;
+}
+
+.about-content img{
+    width:50vh;
+    height: 60vh;
+    /* padding: 2rem 9%; */
+    object-fit: cover;  
+    /* border: 2px solid var(--main-color); */
+}
+
+.about-me{
+    padding: 0 4.5%;
+}
+
+.about-me h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.about-me p {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.about-data{
+    margin-top: 2.3rem;
+    padding: auto 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10%;
+    cursor: pointer;
+}
+
+.about-data .tab {
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+
+}
+
+.tab:hover{
+    color: var(--main-color);
+}
+
+.about-data .tab:active{
+    background-color: black;
+}
+
+.about-data .tab::before {
+    content: ""; 
+    position: absolute;
+    background-color: var(--main-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+
+.about-data .tab:hover::before {
+    width: 100%;
+    
+}
+
+
+.about-data h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.tab-content p {
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
+/*Work section */
+
+.work{
+    padding: 8% 10%;
+}
+
+.work h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.work-list{
+    margin:6% 9%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    gap: 5%;
+}
+
+.work-items{
+    border: 2px solid var(--main-color);
+    width: 35vh;
+    height: 40vh;
+    border-radius: 20px;
+    margin: auto auto 7% auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.work-items img{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 80%;
+    object-fit: cover;
+}
+
+.work-items h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 
 /* Media Queries for Responsive Design */
 @media (max-width: 1024px) {
