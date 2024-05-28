@@ -299,7 +299,8 @@ span {
     border-radius: 20px;
     margin: auto auto 7% auto;
     display: flex;
-    justify-content:space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -308,26 +309,29 @@ span {
     height: 15vh;
     border-radius: 80%;
     object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .work-items h2{
     font-size: 2rem;
     font-weight: 700;
+    text-align: center;
+
 }
 
 
 /* Media Queries for Responsive Design */
 @media (max-width: 1024px) {
     .navbar {
-        display: none; /* Hide navbar on smaller screens */
+        display: none; 
     }
 
     #menu-icon {
-        display: block; /* Show the menu icon */
+        display: block; 
     }
 
     .navbar.active {
-        display: flex; /* Show navbar when active */
+        display: flex; 
         flex-direction: column;
         position: absolute;
         top: 100%;
