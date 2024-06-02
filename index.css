@@ -279,6 +279,140 @@ span {
     font-size: 2rem;
 }
 
+/* Skill section */
+
+/* .skill {
+    padding: 8% 10%;
+}
+
+.skill h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.skills-container {
+    padding: 3rem 10%;
+    max-width: 2000px;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    gap: 10%;
+}
+
+.skill-item {
+    background-color: var(--bg-color);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 20px;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.skill-item h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--text-color);
+} */
+
+
+
+.skill {
+    padding: 8% 10%;
+}
+
+.skill h1{
+    font-size: 4rem;
+    font-weight: 700;   
+    margin-bottom: 3.5rem;
+}
+
+.skills-container {
+    padding: 3rem 10%;
+    max-width: 2000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 6rem;
+}
+
+.skill-item {
+    background-color: var(--snd-bf-color);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.skill-item h2 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+
+/* Skill section modal */
+
+/* Modal styling */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 40%; 
+    height: 40%;
+    overflow: auto; 
+    background-color: var(--snd-bf-color); 
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
 /*Work section */
 
 .work{
