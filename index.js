@@ -67,3 +67,44 @@ document.getElementById('contact-form').addEventListener('submit', sendEmail);
 
 // Event listener for closing success modal
 document.querySelector('.close-button').addEventListener('click', hideSuccessModal);
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const skillDescriptions = {
+        HTML: "HTML (HyperText Markup Language) is the standard markup language for creating web pages.",
+        CSS: "CSS (Cascading Style Sheets) describes how HTML elements are to be displayed on screen.",
+        JavaScript: "JavaScript is a programming language that enables interactive web pages.",
+        React: "React is a JavaScript library for building user interfaces.",
+        Java: "Java is a high-level programming language used to create applications for a variety of platforms.",
+        Figma: "Figma is a web-based UI/UX design tool that enables real-time collaboration."
+    };
+
+    const modal = document.getElementById("skillModal");
+    const modalTitle = document.getElementById("modalSkillTitle");
+    const modalDescription = document.getElementById("modalSkillDescription");
+    const closeButton = document.getElementsByClassName("close")[0];
+
+    document.querySelectorAll('.skill-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const skill = this.getAttribute('data-skill');
+            modalTitle.textContent = skill;
+            modalDescription.textContent = skillDescriptions[skill];
+            modal.style.display = "flex";
+            modal.style.justifyContent = "center";
+            modal.style.alignItems = "center";
+        });
+    });
+
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
